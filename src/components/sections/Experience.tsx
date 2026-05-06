@@ -30,9 +30,9 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section className="py-20 lg:py-28 w-full max-w-[800px] mx-auto" id="experience">
+    <section className="w-full max-w-[800px] mx-auto" id="experience">
       <FadeUp>
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-stone-900">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-24 text-stone-900">
           My <span className="text-amber-600">Journey</span>
         </h2>
       </FadeUp>

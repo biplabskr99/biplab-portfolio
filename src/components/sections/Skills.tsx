@@ -27,9 +27,9 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section className="py-20 lg:py-28 w-full" id="skills">
+    <section className="w-full" id="skills">
       <FadeUp>
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-stone-900">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-24 text-stone-900">
           Technical <span className="text-amber-600">Arsenal</span>
         </h2>
       </FadeUp>

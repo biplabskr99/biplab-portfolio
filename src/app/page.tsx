@@ -11,7 +11,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center w-full overflow-hidden">
       <ScrollStepper />
       <Hero />
-      <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center space-y-32 md:space-y-48 mb-32">
         <Specialization />
         <Projects />
         <Skills />

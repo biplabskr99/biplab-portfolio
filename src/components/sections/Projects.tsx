@@ -220,13 +220,13 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 lg:py-28 w-full overflow-hidden">
+    <section id="projects" className="w-full overflow-hidden">
       <div className="w-full">
         <FadeUp>
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-stone-900">
             Featured <span className="text-amber-600">Projects</span>
           </h2>
-          <p className="text-center text-stone-500 mb-16 max-w-xl mx-auto">
+          <p className="text-center text-stone-500 mb-20 max-w-xl mx-auto">
             Navigate through my work — click the side cards to explore, or interact with the active one.
           </p>
         </FadeUp>
@@ -300,22 +300,23 @@ export function Projects() {
               ))}
             </div>
 
-            <div className="flex gap-4 justify-center">
-              {active.liveUrl && (
+            <div className="flex flex-wrap gap-4 justify-center items-center">
+              {active.liveUrl ? (
                 <Button variant="primary" className="gap-2" onClick={() => window.open(active.liveUrl, "_blank")}>
                   <ExternalLink size={16} aria-hidden /> Live Demo
                 </Button>
+              ) : (
+                <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-stone-100 text-stone-500 border border-stone-200 text-xs font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-stone-400 animate-pulse" />
+                  Internal Project
+                </div>
               )}
-              {!active.liveUrl && (
-                <Button variant="primary" className="gap-2" onClick={() => setSelectedProject(active)}>
-                  <Eye size={16} aria-hidden /> Preview
-                </Button>
-              )}
-              {active.githubUrl && (
-                <Button variant="outline" className="gap-2" onClick={() => window.open(active.githubUrl, "_blank")}>
-                  <Code size={16} aria-hidden /> Source
-                </Button>
-              )}
+              
+
+
+              <Button variant={active.liveUrl ? "outline" : "primary"} className="gap-2" onClick={() => setSelectedProject(active)}>
+                <Eye size={16} aria-hidden /> Case Study
+              </Button>
             </div>
           </motion.div>
         </AnimatePresence>

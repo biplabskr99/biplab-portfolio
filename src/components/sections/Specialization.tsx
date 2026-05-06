@@ -27,12 +27,12 @@ const areas = [
 
 export function Specialization() {
   return (
-    <section className="py-20 lg:py-28 w-full" id="specialization">
+    <section className="w-full" id="specialization">
       <FadeUp>
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-stone-900">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-stone-900">
           My <span className="text-amber-600">Specializations</span>
         </h2>
-        <p className="text-stone-500 text-center max-w-2xl mx-auto mb-16 text-lg">
+        <p className="text-stone-500 text-center max-w-2xl mx-auto mb-20 text-lg">
           I bridge the gap between design and engineering to build products that look good and perform flawlessly.
         </p>
       </FadeUp>

@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* 60% — Deep warm amber-cream (rich, clearly colorful) */
+  --color-base-bg:    #FEF3C7;
+  --color-base-card:  #FFFBEB;
+
+  /* 30% — Amber-tinted panels */
+  --color-secondary:       #FDE68A;
+  --color-secondary-light: #FCD34D;
+  --color-border:          #F59E0B;
+
+  /* 10% — Deep amber / burnt orange accent */
+  --color-accent:       #D97706;
+  --color-accent-dark:  #B45309;
+  --color-accent-light: #F59E0B;
+
+  /* Text */
+  --color-text-primary:   #1C1917;
+  --color-text-secondary: #57534E;
+  --color-text-muted:     #A8A29E;
+
+  /* Legacy aliases */
+  --color-background:    #FEF3C7;
+  --color-foreground:    #1C1917;
+  --color-primary-blue:  #D97706;
+  --color-primary-purple:#D97706;
+  --color-primary-pink:  #F59E0B;
+
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #FEF3C7;
+  --foreground: #1C1917;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Solid accent text */
+@utility text-gradient {
+  color: var(--color-accent);
+}
+
+/* Solid accent button background */
+@utility bg-gradient-primary {
+  background-color: var(--color-accent);
+}
+
+/* Glass card — light mode */
+@utility glass {
+  background-color: rgba(255,255,255,0.80);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+}
+
+.glass-hover {
+  transition: all 0.3s ease;
+}
+.glass-hover:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 40px -10px rgba(217,119,6,0.2);
+  transform: translateY(-2px);
 }

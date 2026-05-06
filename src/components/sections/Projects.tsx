@@ -7,7 +7,7 @@ import { FadeUp } from "@/components/animations/FadeUp";
 import { Button } from "@/components/ui/Button";
 import { ProjectModal } from "./ProjectModal";
 
-interface Project {
+export interface Project {
   id: string;
   title: string;
   description: string;

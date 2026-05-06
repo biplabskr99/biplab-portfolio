@@ -310,7 +310,7 @@ export function Projects() {
       </div>
 
       {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+        <ProjectModal project={selectedProject} isOpen={true} onClose={() => setSelectedProject(null)} />
       )}
     </section>
   );

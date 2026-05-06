@@ -10,7 +10,7 @@ export function Contact() {
     <section className="py-20 lg:py-28 w-full" id="contact">
       <FadeUp>
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-stone-900">
-          Let&apos;s <span className="text-amber-600">Connect</span>
+          Let&apos;s <span className="text-amber-600">Connects</span>
         </h2>
         <p className="text-stone-500 text-center max-w-2xl mx-auto mb-16 text-lg">
           I&apos;m currently open for new opportunities. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!

@@ -48,7 +48,7 @@ export function Hero() {
                 className="block"
               >
                 <span className="text-stone-400 font-normal">Hi, I&apos;m</span>{" "}
-                <span className="text-amber-600">Biplab</span>
+                <span className="text-amber-600">Biplab Sarkar</span>
               </motion.span>
             </span>
           </h1>

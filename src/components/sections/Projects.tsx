@@ -23,6 +23,18 @@ export interface Project {
 
 const projectsData: Project[] = [
   {
+    id: "toto",
+    title: "TOTO Registration (E-rickshaw)",
+    description: "A single window registration website for unregistered toto drivers. Features a 6-step registration form with GRIPS payment integration and a 3-level admin panel for application oversight.",
+    tags: ["React", "Java Spring Boot", "MySQL", "GRIPS Integration"],
+    category: "Web",
+    liveUrl: "https://tten.wb.gov.in/",
+    images: ["/projects/toto.png"],
+    problem: "There was no centralized system to regulate and register thousands of unlicensed toto drivers in West Bengal.",
+    solution: "Developed a secure 6-step registration portal with government payment gateway integration and a hierarchical approval workflow.",
+    outcome: "Streamlined the registration process for over 50,000+ drivers within the first 6 months."
+  },
+  {
     id: "1",
     title: "E-Commerce Platform",
     description: "A full-stack e-commerce solution with real-time inventory management, stripe payments, and an admin dashboard.",

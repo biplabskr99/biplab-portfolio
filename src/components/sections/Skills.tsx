@@ -4,24 +4,24 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/animations/F
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Web & Core",
     color: "bg-amber-500",
-    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "Redux"],
+    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
   },
   {
-    title: "Mobile",
+    title: "Mobile Development",
     color: "bg-orange-500",
-    skills: ["React Native", "Expo", "iOS", "Android", "Mobile UI/UX", "Offline Storage"],
+    skills: ["React Native", "Flutter", "Dart", "Java", "Kotlin", "Expo", "Mobile UI/UX"],
   },
   {
-    title: "Backend & Systems",
+    title: "Backend & Testing",
     color: "bg-rose-500",
-    skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "Redis", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "Axios", "REST APIs", "Postman", "MySQL"],
   },
   {
-    title: "Tools & DevOps",
+    title: "State & Tools",
     color: "bg-teal-500",
-    skills: ["Git", "Docker", "AWS", "CI/CD", "Jest", "Figma"],
+    skills: ["Redux", "Provider", "Solidity (Blockchain)", "Figma (UI/UX)", "Git", "AWS", "Maps API"],
   },
 ];
 

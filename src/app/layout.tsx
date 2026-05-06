@@ -9,8 +9,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Biplab | Developer Portfolio",
-  description: "Modern, high-performance developer portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
+  title: "Biplab Sarkar | Software Engineer",
+  description: "Portfolio of Biplab Sarkar, a Software Engineer specialized in Frontend and Mobile development with React, Next.js, and React Native.",
 };
 
 export default function RootLayout({

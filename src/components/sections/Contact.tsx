@@ -10,7 +10,7 @@ export function Contact() {
     <section className="py-20 lg:py-28 w-full" id="contact">
       <FadeUp>
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 text-stone-900">
-          Let&apos;s <span className="text-amber-600">Connects</span>
+          Let&apos;s <span className="text-amber-600">Connect</span>
         </h2>
         <p className="text-stone-500 text-center max-w-2xl mx-auto mb-16 text-lg">
           I&apos;m currently open for new opportunities. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
@@ -28,8 +28,8 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-stone-400 mb-1">Email</p>
-                  <a href="mailto:hello@example.com" className="text-stone-700 hover:text-amber-600 transition-colors font-medium">
-                    hello@example.com
+                  <a href="mailto:biplabskr25@gmail.com" className="text-stone-700 hover:text-amber-600 transition-colors font-medium">
+                    biplabskr25@gmail.com
                   </a>
                 </div>
               </div>
@@ -39,7 +39,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-stone-400 mb-1">Location</p>
-                  <p className="text-stone-700 font-medium">San Francisco, CA</p>
+                  <p className="text-stone-700 font-medium">Kolkata, India</p>
                 </div>
               </div>
             </div>

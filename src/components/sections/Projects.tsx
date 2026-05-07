@@ -140,6 +140,28 @@ const projectsData: Project[] = [
     solution: "Developed a custom Android application integrated with Pax, Ezetap, and PineLabs SDKs, featuring real-time fee calculation, Bluetooth gate control, and a robust offline SQLite sync engine.",
     outcome: "Successfully deployed and operational at high-traffic hubs including Apollo Multispeciality Hospitals (Salt Lake) and Magma House (Park Street), streamlining vehicle throughput and ensuring 100% financial accountability through digital record-keeping."
   },
+  {
+    id: "smart-power",
+    title: "Smart Power Ticketing System",
+    description: "An enterprise-grade offline-first ticketing solution for POS terminals, streamlining visitor management with real-time sync and hardware integration.",
+    tags: ["Java", "Android", "MVVM", "Room DB", "POS SDK", "AIDL"],
+    category: "Mobile",
+    images: ["/projects/smart-power.jpg"],
+    problem: "Eco Park required a high-performance, rugged ticketing system that could handle massive visitor volumes with 100% reliability, even during network outages.",
+    solution: "Architected an MVVM-based Android application with an offline-first strategy using Room DB. Developed a hardware-agnostic bridge for PineLab, Sunmi, and Pax devices to ensure seamless thermal printing across different terminals.",
+    outcome: "Successfully operational at Eco Park (Kolkata), processing thousands of tickets daily with zero data loss and significantly reduced wait times at entry gates."
+  },
+  {
+    id: "e-sakshya",
+    title: "eSakshya",
+    description: "An enterprise-grade Flutter utility for law enforcement, featuring secure attendance, evidence collection, and background data synchronization.",
+    tags: ["Flutter", "Hive", "SQFlite", "AWS S3", "Geolocation", "Biometrics"],
+    category: "Mobile",
+    images: ["/projects/e-sakshya.jpg"],
+    problem: "Field officers needed a secure, high-integrity platform for attendance and evidence documentation that works reliably in low-connectivity environments.",
+    solution: "Developed a Flutter-based application with an offline-first architecture using Hive and SQFlite. Integrated jailbreak detection for security and a robust background sync mechanism to ensure data reaches the server (AWS S3) as soon as connectivity is restored.",
+    outcome: "Empowered the West Bengal Police with a tamper-proof digital paper trail for field operations, ensuring 100% data integrity and accountability across the organization."
+  },
 ];
 
 const CATEGORY_COLORS: Record<string, string> = {

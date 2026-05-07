@@ -23,6 +23,101 @@ export interface Project {
 
 const projectsData: Project[] = [
   {
+    id: "puja-bandhu",
+    title: "Puja Bandhu (Kolkata Police)",
+    description: "Official festival companion app for Kolkata Police, providing 100,000+ users with real-time pandal navigation, traffic updates, and emergency services.",
+    tags: ["React Native", "Expo", "Google Maps API", "Java Spring Boot", "High Scale"],
+    category: "Mobile",
+    liveUrl: "https://play.google.com/store/apps/details?id=com.indranilvyoma.boltexponativewind&hl=en",
+    images: ["/projects/puja-bandhu-1.png", "/projects/puja-bandhu-2.png", "/projects/puja-bandhu-3.png", "/projects/puja-bandhu-4.png"],
+    problem: "Coordinating safety and navigation for millions of visitors during the Durga Puja festival was a massive logistical challenge for the Kolkata Police.",
+    solution: "Developed a scalable mobile platform with GPS-based location tracking, interactive maps for nearby utilities (parking, hospitals, police), and real-time crowd management alerts.",
+    outcome: "Achieved over 100,000+ downloads and successfully supported peak festive traffic, significantly improving public safety and navigation efficiency across the city."
+  },
+  {
+    id: "ucap",
+    title: "Unified Common Admission Portal (UCAP)",
+    description: "A large-scale educational admission and scholarship platform for West Bengal, featuring AI-driven face detection and real-time government API integrations.",
+    tags: ["React 19", "TypeScript", "Zustand", "TensorFlow.js", "Java Spring Boot"],
+    category: "Web",
+    liveUrl: "https://admission-tetsd.wb.gov.in/",
+    images: ["/projects/ucap.png"],
+    problem: "Managing thousands of admission and scholarship applications across multiple departments required a secure, unified platform with automated verification to prevent identity fraud.",
+    solution: "Developed a comprehensive portal with multi-tiered verifier roles, AI-based profile moderation using TensorFlow.js, and real-time NIC API connectivity for certificate validation.",
+    outcome: "Unified the admission lifecycle for multiple technical councils, ensuring 100% data integrity and significantly reducing the manual burden on institutional verifiers."
+  },
+  {
+    id: "allarrest-mobile",
+    title: "AllArrest Mobile",
+    description: "An enterprise-grade law enforcement ecosystem for the West Bengal Police, featuring Aadhaar-based biometric verification and secure arrest documentation.",
+    tags: ["React Native", "TypeScript", "Native Modules", "Biometrics", "Node.js"],
+    category: "Mobile",
+    images: ["/projects/all-arrest-mob-1.jpg", "/projects/all-arrest-mob-2.jpg", "/projects/all-arrest-mob-3.jpg"],
+    problem: "Field officers needed a secure, high-integrity way to verify identities and document arrests in real-time without relying on manual, error-prone entry.",
+    solution: "Built a robust React Native app with a custom Native Module bridge for RD biometric services, enabling secure Aadhaar fingerprint scanning and automated profile ingestion.",
+    outcome: "Transformed law enforcement operations by providing a secure digital paper trail, eliminating identity fraud, and optimizing field documentation speed."
+  },
+  {
+    id: "attendance-web",
+    title: "Attendance Management Web",
+    description: "A high-performance Next.js 15 admin portal featuring real-time attendance analytics, automated leave processing, and advanced PDF/Excel reporting.",
+    tags: ["Next.js 15", "TypeScript", "Shadcn UI", "Recharts", "Leaflet"],
+    category: "Web",
+    liveUrl: "https://vigpl.com/attendance",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"],
+    problem: "HR departments needed a centralized, real-time dashboard to monitor employee movements and automate complex reporting tasks across multiple office locations.",
+    solution: "Built a secure, full-stack portal with interactive D3-based charts, geolocation tracking via Leaflet, and an automated report generation engine for payroll compliance.",
+    outcome: "Reduced monthly reporting time by 80% and provided executives with instant, data-driven insights into organizational attendance trends."
+  },
+  {
+    id: "vig-attendance",
+    title: "VIG Attendance",
+    description: "A professional employee management application for tracking real-time attendance, managing leave requests, and maintaining organizational profiles.",
+    tags: ["React Native", "Expo", "Java Spring Boot", "MySQL", "Mobile UI"],
+    category: "Mobile",
+    liveUrl: "https://play.google.com/store/apps/details?id=com.indranilvyoma.VIGAttendance&hl=en",
+    images: ["/projects/vig-1.png", "/projects/vig-2.png", "/projects/vig-3.png"],
+    problem: "Organizations struggled with manual attendance tracking and fragmented leave management processes, leading to payroll inaccuracies and administrative delays.",
+    solution: "Developed an integrated mobile solution with real-time check-in/out capabilities, automated leave balance tracking, and a hierarchical approval workflow connected to a robust Spring Boot backend.",
+    outcome: "Streamlined HR operations for the organization, achieving 100% digital attendance accuracy and reducing leave processing time by over 60%."
+  },
+  {
+    id: "student-portal",
+    title: "Student Management Portal",
+    description: "A centralized academic management system for WBSCTVE&SD coordinating marks entry and progress tracking for thousands of students across West Bengal.",
+    tags: ["React", "Vite", "Java Spring Boot", "MySQL", "OTP Auth"],
+    category: "Web",
+    liveUrl: "https://sctedved.wb.gov.in/emp/login",
+    images: ["https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1000&auto=format&fit=crop"],
+    problem: "Coordinating marks entry and academic verification across hundreds of polytechnic institutes was a manual, slow, and error-prone process.",
+    solution: "Built a role-based portal with real-time analytics, cascading state-driven filters, and a secure OTP-based administrative control system to manage the entire evaluation lifecycle.",
+    outcome: "Digitized the academic lifecycle for the state council, ensuring transparency, preventing data loss, and providing real-time oversight for council executives."
+  },
+  {
+    id: "allarrest",
+    title: "AllArrest Management System",
+    description: "A centralized digital register for the West Bengal Police to capture and manage arrestee information with Aadhaar-based real-time verification.",
+    tags: ["React", "Node.js", "MySQL", "Microservices", "Aadhaar Auth"],
+    category: "Web",
+    liveUrl: "https://allarrest.wb.gov.in/",
+    images: ["/projects/all-arrest.png"],
+    problem: "Police departments relied on manual record-keeping for arrestee data, leading to data inaccuracies, slow information retrieval, and fragmented criminal records.",
+    solution: "Developed a secure, microservices-based platform for digital data entry of personal info, case records, and legal docs, integrated with Aadhaar for instant identity verification.",
+    outcome: "Significantly improved operational efficiency for West Bengal Police, enabling faster investigation tracking and centralized access to criminal data across departments."
+  },
+  {
+    id: "haat",
+    title: "Haat Management System",
+    description: "A multi-role digital platform for Zila Parishad Jalpaiguri to manage shop surveys, verifications, and certification workflows for traditional markets.",
+    tags: ["React", "Java Spring Boot", "MySQL", "Workflow Engine"],
+    category: "Web",
+    liveUrl: "https://haatmgmtjpgzp.wb.gov.in/",
+    images: ["/projects/haat-management.png"],
+    problem: "Market management was fragmented, lacking transparency in shop allocation, verification, and certification processes across rural districts.",
+    solution: "Designed an end-to-end role-based platform that automates the entire lifecycle—from initial survey by field agents to multi-stage verification, digital hearings, and automated certificate issuance.",
+    outcome: "Successfully digitized market operations for Zila Parishad, ensuring 100% process transparency and accountability for thousands of shop owners."
+  },
+  {
     id: "toto",
     title: "TOTO Registration (E-rickshaw)",
     description: "A single window registration website for unregistered toto drivers. Features a 6-step registration form with GRIPS payment integration and a 3-level admin panel for application oversight.",
@@ -35,80 +130,15 @@ const projectsData: Project[] = [
     outcome: "Streamlined the registration process for over 50,000+ drivers within the first 6 months."
   },
   {
-    id: "1",
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management, stripe payments, and an admin dashboard.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "Prisma"],
-    category: "Web",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
-    images: ["https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop"],
-    problem: "Traditional e-commerce platforms were too slow and difficult to customize.",
-    solution: "Built a headless commerce solution using Next.js App Router for instant page transitions.",
-    outcome: "Increased conversion rate by 24% and reduced load times by 2 seconds."
-  },
-  {
-    id: "2",
-    title: "Financial Dashboard",
-    description: "A comprehensive analytics dashboard for tracking investments, with interactive charts and real-time data feeds.",
-    tags: ["React", "Redux", "Framer Motion", "Recharts", "WebSockets"],
-    category: "Web",
-    githubUrl: "https://github.com",
-    images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop"
-    ],
-    problem: "Users needed a way to visualize complex financial data intuitively.",
-    solution: "Implemented a modular dashboard with customizable widgets and real-time WebSocket connections.",
-    outcome: "Adopted by 500+ active users within the first month of launch."
-  },
-  {
-    id: "3",
-    title: "Social Media Scheduler",
-    description: "An automated scheduling tool to plan, preview, and post content across multiple social platforms.",
-    tags: ["Vue.js", "Node.js", "Express", "MongoDB", "OAuth"],
-    category: "Web",
-    liveUrl: "https://example.com",
-    images: ["https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop"],
-    problem: "Managing content across multiple platforms was time-consuming.",
-    solution: "Created a unified timeline view integrated with native platform APIs.",
-    outcome: "Saved users an average of 10 hours per week in content management."
-  },
-  {
-    id: "4",
-    title: "Health & Fitness Tracker",
-    description: "A mobile-first app for tracking daily workouts, nutrition, and personal records.",
-    tags: ["React Native", "Expo", "Firebase", "HealthKit"],
+    id: "sparking-agent",
+    title: "SParkingAgent",
+    description: "A comprehensive Parking Management Solution for Android POS terminals, featuring thermal printing, hardware integration, and offline-first synchronization.",
+    tags: ["Java", "Android", "Retrofit", "SQLite", "POS SDK", "Bluetooth"],
     category: "Mobile",
-    githubUrl: "https://github.com",
-    images: ["https://images.unsplash.com/photo-1526506114622-6b14249bb3c7?q=80&w=1000&auto=format&fit=crop"],
-    problem: "Most fitness apps were too complex or required expensive subscriptions.",
-    solution: "Built a streamlined, offline-first app focusing on core metrics.",
-    outcome: "Achieved a 4.8 star rating on the App Store with 10k+ active users."
-  },
-  {
-    id: "5",
-    title: "AI Writing Assistant",
-    description: "A browser extension providing real-time grammar checking, tone suggestions, and AI text generation.",
-    tags: ["Next.js", "OpenAI API", "Chrome Extensions", "Tailwind"],
-    category: "AI",
-    liveUrl: "https://example.com",
-    images: ["https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000&auto=format&fit=crop"],
-    problem: "Writers struggled to maintain a consistent tone across documents.",
-    solution: "Integrated GPT-4 to analyze context and suggest improvements inside any text box.",
-    outcome: "Processed over 1 million words in the first week of beta testing."
-  },
-  {
-    id: "6",
-    title: "Real Estate Platform",
-    description: "A modern property listing platform with 3D virtual tours, advanced filtering, and agent messaging.",
-    tags: ["React", "Three.js", "PostgreSQL", "Prisma", "AWS"],
-    category: "Web",
-    githubUrl: "https://github.com",
-    images: ["https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop"],
-    problem: "Property photos weren't enough for remote buyers to make decisions.",
-    solution: "Implemented WebGL-based virtual tours allowing browser-based exploration.",
-    outcome: "Increased out-of-state property inquiries by 35%."
+    images: ["/projects/sparking-1.jpg", "/projects/sparking-2.jpg", "/projects/sparking-3.jpg", "/projects/sparking-4.jpg"],
+    problem: "Attendants needed a rugged, all-in-one solution for high-volume parking environments that works reliably on specialized POS hardware even without internet.",
+    solution: "Developed a custom Android application integrated with Pax, Ezetap, and PineLabs SDKs, featuring real-time fee calculation, Bluetooth gate control, and a robust offline SQLite sync engine.",
+    outcome: "Successfully deployed and operational at high-traffic hubs including Apollo Multispeciality Hospitals (Salt Lake) and Magma House (Park Street), streamlining vehicle throughput and ensuring 100% financial accountability through digital record-keeping."
   },
 ];
 

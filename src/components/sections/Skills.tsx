@@ -6,12 +6,12 @@ const skillCategories = [
   {
     title: "Web & Core",
     color: "bg-amber-500",
-    skills: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
+    skills: ["React 19", "Next.js 15", "TypeScript", "Zustand", "AI Integration", "Tailwind CSS", "Vite", "HTML"],
   },
   {
     title: "Mobile Development",
     color: "bg-orange-500",
-    skills: ["React Native", "Flutter", "Dart", "Java", "Kotlin", "Expo", "Mobile UI/UX"],
+    skills: ["React Native", "Flutter", "Native Modules", "Biometrics", "Java", "Kotlin", "Expo", "Mobile UI/UX"],
   },
   {
     title: "Backend & Testing",
@@ -21,7 +21,7 @@ const skillCategories = [
   {
     title: "State & Tools",
     color: "bg-teal-500",
-    skills: ["Redux", "Provider", "Solidity (Blockchain)", "Figma (UI/UX)", "Git", "AWS", "Maps API"],
+    skills: ["Redux", "Provider", "Microservices", "Solidity", "Figma", "Git", "AWS", "Maps API"],
   },
 ];
 

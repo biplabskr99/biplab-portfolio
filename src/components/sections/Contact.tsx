@@ -1,11 +1,49 @@
 "use client";
 
-import { Mail, MapPin, Send, Code, Briefcase, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { Mail, MapPin, Send, Code, Briefcase, MessageCircle, CheckCircle2, AlertCircle } from "lucide-react";
 import { FadeUp } from "@/components/animations/FadeUp";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 
 export function Contact() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "82017d26-bdf1-4667-861a-2cc6601027db",
+          ...data,
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus("error");
+        setErrorMessage(result.message || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage("Failed to send message. Please check your connection.");
+    }
+  };
+
   return (
     <section className="w-full" id="contact">
       <FadeUp>
@@ -67,30 +105,51 @@ export function Contact() {
 
         <FadeUp delay={0.2}>
           <GlassCard>
-            <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="text-sm font-semibold text-stone-700">Name</label>
                 <input
-                  type="text" id="name" placeholder="John Doe"
+                  type="text" name="name" id="name" placeholder="John Doe" required
                   className="w-full px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400 transition-all"
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="text-sm font-semibold text-stone-700">Email</label>
                 <input
-                  type="email" id="email" placeholder="john@example.com"
+                  type="email" name="email" id="email" placeholder="john@example.com" required
                   className="w-full px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400 transition-all"
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="message" className="text-sm font-semibold text-stone-700">Message</label>
                 <textarea
-                  id="message" rows={5} placeholder="How can I help you?"
+                  name="message" id="message" rows={5} placeholder="How can I help you?" required
                   className="w-full px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400 transition-all resize-none"
                 />
               </div>
-              <Button variant="primary" className="mt-4 gap-2 w-full sm:w-auto self-start">
-                Send Message <Send size={18} aria-hidden="true" />
+              
+              {status === "success" && (
+                <div className="flex items-center gap-2 text-emerald-600 bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+                  <CheckCircle2 size={18} />
+                  <p className="text-sm font-medium">Message sent successfully!</p>
+                </div>
+              )}
+
+              {status === "error" && (
+                <div className="flex items-center gap-2 text-rose-600 bg-rose-50 p-4 rounded-xl border border-rose-100">
+                  <AlertCircle size={18} />
+                  <p className="text-sm font-medium">{errorMessage}</p>
+                </div>
+              )}
+
+              <Button 
+                variant="primary" 
+                type="submit"
+                disabled={status === "loading"}
+                className="mt-4 gap-2 w-full sm:w-auto self-start"
+              >
+                {status === "loading" ? "Sending..." : "Send Message"} 
+                <Send size={18} aria-hidden="true" className={status === "loading" ? "animate-pulse" : ""} />
               </Button>
             </form>
           </GlassCard>
